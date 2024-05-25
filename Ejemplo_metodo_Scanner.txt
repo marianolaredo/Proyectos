@@ -1,0 +1,13 @@
+ Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese numero de fila que desea ver los tickets");
+        int fila = teclado.nextInt();
+        boolean bandera = false;
+        
+                for(Ticket tick : listaTicket){
+                   if(tick.getFila()== fila) {
+                       System.out.println(tick.toString());
+                       bandera = true;        
+                      } 
+                 }
+                if (bandera==false){
+                    System.out.println("No se encontraron Tickets en la fila ");
